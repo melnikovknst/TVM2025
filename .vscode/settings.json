@@ -19,4 +19,8 @@
     },
     "jest.runMode": "on-demand",
     "jest.debugMode": true,
+
+    "terminal.integrated.env.osx": {
+        "PATH": "/Users/melnikovknst/.nvm/versions/node/v22.19.0/bin:${env:PATH}"
+    }
 }

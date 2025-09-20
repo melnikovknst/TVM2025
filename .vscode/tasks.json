@@ -9,7 +9,7 @@
         },
         {
             "label": "build",
-            "command": "pnpm",
+            "command": "/Users/melnikovknst/.nvm/versions/node/v22.19.0/bin/pnpm",
             "args": ["--aggregate-output", "-r", "build"],
 //            "options": {"cwd": "${fileDirname}/../"},
             
