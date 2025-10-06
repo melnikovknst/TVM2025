@@ -15,10 +15,17 @@ export class SyntaxError extends Error
 
 export function parse(content: string): MatchResult
 {
-    throw "Not implemented";
+    const match = grammar.match(content);
+    if (match.failed())
+        throw new SyntaxError(match.shortMessage)
+    
+    return match;
 }
 
 function calculate(expression: MatchResult, params: {[name:string]: number}): number
 {
-    throw "Not implemented";
+    if (expression.failed())
+        throw new SyntaxError(expression.shortMessage);
+
+    return arithSemantics(expression).calculate(params);
 }

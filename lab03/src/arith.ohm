@@ -1,3 +1,10 @@
 Arithmetic {
-    // write rules here
+    Expr = AdditiveExp
+    AdditiveExp = TermExp (("+" | "-") TermExp)*  
+    TermExp = Unary (("*" | "/") Unary)*   
+    Unary = "-"* Atom
+    Atom = Paren | number | variable
+    Paren = "("AdditiveExp")"
+    number = digit+
+    variable = letter (letter | digit)*
 }
